@@ -1,0 +1,145 @@
+/*Стиль главной страницы*/
+div.thinks
+{
+	height: 170px;
+	width: 170px;
+	background-color: #ffb74d;
+	border-radius: 10px; 
+	
+	display: inline-block;
+	padding: 10px;
+	margin: 20px;
+	vertical-align:top;
+}
+button.thinks
+{
+	height: 140px;
+	width: 170px;
+	background-color: #ffb74d;
+	
+	outline: none; 
+	border-width: 0;
+	font-size: 20px;
+}
+textarea.thinks
+{
+	font-size: 18px;
+	width:260px;
+	height:130px;
+}
+
+body
+{
+	background-color: #B2EBF2;
+}
+a
+{
+ 	font-size: 18px;
+ 	text-decoration: none;
+ 	color:black;	
+}
+/*Стиль логина*/
+div.login
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	background-color: #FFD54F;
+	padding: 15px;
+	font-size: 18px;
+}
+input.login
+{
+	border: 5px solid white;
+	width: 200px;
+ 	height: 30px;
+ 	font-size: 18px;
+ 	outline: none;
+ 	margin: 6px;
+ 	text-align: center;
+}
+button.login
+{
+	font-size: 18px;
+ 	height: 30px;
+ 	width: 55px;
+ 	float: left;
+	
+	overflow: hidden;
+	border-width: 0;
+    outline: none;
+    margin: 6px; 
+}
+ a.login
+{
+ 	float: right;
+ 	font-size: 18px;
+ 	text-decoration: none;
+ 	color:black;
+}
+ font.login
+{
+ 	color: black;
+}
+/*Стиль регистрацыии*/
+div.reg
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%); 
+	font-size: 18px;
+}
+button.reg
+{
+	font-size: 18px;
+ 	height: 30px;
+ 	width: 130px;
+ 	float: left;
+	padding: 0;
+	overflow: hidden;
+	border-width: 0;
+    outline: none;
+    margin: 6px;  
+ }
+/*Html popup*/
+
+
+
+ /*Javascript popup*/
+
+ .pad {
+ 	position:fixed;
+ 	left:0px;
+ 	right:0px;
+ 	top:0px;
+ 	bottom:0px;
+ 	background-color:gray;
+ 	opacity:0.8;
+ 	text-align:center;
+ 	vertical-align:middle;
+ 	display:inline-block;
+ }
+
+ .form {
+ 	
+ 	position:absolute;
+ 	top:50%;
+ 	left:50%;
+	margin-top:-130px;
+	margin-left:-68px;
+
+ }
+ /*Ввод текста*/
+ div.new
+ {
+ 	background-color: white;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	padding: 15px;
+	font-size: 18px;
+
+ }
