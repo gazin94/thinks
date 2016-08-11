@@ -13,19 +13,20 @@ class MysqlConnect
 	return $con;
 	}
 
-	function querySelect($connect,$qerry)
+	function querySelect($connect,$query)
 	{
-		$result=$connect->query($qerry);//qerry on database
+		$result=$connect->query($qerry);//query on database
 while ($row=@$result->fetch_assoc())
 	$connect->close();
 	return $row;
 	}
 
-	function queryInsert($connect,$qerry)
+	function queryInsert($connect,$query)
 	{
 	$result=$connect->query($query);
 	if (!$result)  
 	print $connect->error;
+
 	$connect->close();
 	}
 
