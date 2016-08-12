@@ -1,24 +1,28 @@
 <?php 
 require_once 'mysqlConnect.php';
 
+print_r($_POST);
+
+
 if ($_POST['password']==$_POST['re_password']) {
-<<<<<<< HEAD
+	$pass=md5($_POST['password']);
 	$test=new MysqlConnect();
 	$test->connect();
 	$login=$test->emptyTest($_POST['login']);
 	$email=$test->emptyTest($_POST['email']);
-	$query="INSERT Into users set nickname='".$login."' email='".$email."'";
-	//$tets->queryInsert($query);
-	$test->newCustomer($_POST['login'],$_POST['re_password']);
-=======
-$test=new MysqlConnect();
-$con=$test->connect('localhost','ivan','1','ivan')
-$login=$test->emptyTest($con,$_POST['login']);
-$email=$test->emptyTest($con,$_POST['email']);
-$query="INSERT Into users set nickname='".$login."' email='".$email."'";
-$tets->queryInsert($con,)
-$test->newCustomer($_POST['login'],$_POST['password']);
->>>>>>> e580afdb6336f622a02b4ba602d09dc1431eff72
+
+	$query='INSERT INTO users SET'
+		.' login="'.$login.'"'
+		.',email="'.$email.'"'
+		.', pass="'.$pass.'"';
+
+	$res=$test->queryInsert($query);
+	print '<hr>';
+	print_r($res);
+	
+	print '<hr>';
+	if ($res) $_SESSION['user_id']=$res;
+	print 'Вы залгинились как '.$login.'('.$res.')';
 }
 else
 	echo "Пароли не совпадают";

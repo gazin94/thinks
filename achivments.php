@@ -14,7 +14,6 @@ if($result){
 		print $box->makeView();
 	}
 }
-=======
 if($result==false)
 {}
 else
