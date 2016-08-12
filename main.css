@@ -66,7 +66,6 @@ button.login
  	height: 30px;
  	width: 55px;
  	float: left;
-	
 	overflow: hidden;
 	border-width: 0;
     outline: none;
@@ -89,21 +88,21 @@ div.reg
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-right: -50%;
 	transform: translate(-50%, -50%); 
 	font-size: 18px;
+	display: inline-flex;
 }
 button.reg
 {
 	font-size: 18px;
  	height: 30px;
  	width: 130px;
- 	float: left;
 	padding: 0;
 	overflow: hidden;
 	border-width: 0;
     outline: none;
-    margin: 6px;  
+    margin: 6px; 
+
  }
 /*Html popup*/
 

@@ -1,11 +1,12 @@
 <?php 
 require_once 'mysqlConnect.php';
 
-print_r($_POST);
+//print_r($_POST);
 
 
 if ($_POST['password']==$_POST['re_password']) {
-	$pass=md5($_POST['password']);
+	$password=$test->emptyTest($_POST['re_password']);
+	$pass=md5($password);
 	$test=new MysqlConnect();
 	$test->connect();
 	$login=$test->emptyTest($_POST['login']);
@@ -17,12 +18,12 @@ if ($_POST['password']==$_POST['re_password']) {
 		.', pass="'.$pass.'"';
 
 	$res=$test->queryInsert($query);
-	print '<hr>';
-	print_r($res);
+	//print '<hr>';
+	//print_r($res);
 	
-	print '<hr>';
+	//print '<hr>';
 	if ($res) $_SESSION['user_id']=$res;
-	print 'Вы залгинились как '.$login.'('.$res.')';
+	//print 'Вы залгинились как '.$login.'('.$res.')';
 }
 else
 	echo "Пароли не совпадают";
