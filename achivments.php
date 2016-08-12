@@ -14,5 +14,15 @@ if($result){
 		print $box->makeView();
 	}
 }
+=======
+if($result==false)
+{}
+else
+{
+while ($row=@$result->fetch_assoc()){
+		$box=new TBox($row);
+		print $box->makeView();
+	}
+	}
 $db->close();
 ?>
