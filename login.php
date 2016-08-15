@@ -14,9 +14,10 @@ print '<hr>';
 print_r($auth);
 if (empty($auth)) {
 	echo "empty";
-	header('location:login.html');
+	//header('location:login.html');
 }
 echo "Привет ".$_POST['login'];
-$_SESSION['id']=$autch['id'];
-header('location:index.php');
+$_SESSION["id"]=$auth['id'];
+//header('location:index.php');
+echo $_SESSION['id'];
 ?>

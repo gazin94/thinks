@@ -7,10 +7,14 @@
 	 <meta charset="utf-8" />
 </head>
 <header>
-<DIV class="header"><h1><?php
+<DIV class="header"><h1>
+<?php
 session_start();
 echo "Hello ";
-print_r($_SESSION['id']); ?> Досягнення дня</h1>
+print_r($_SESSION); 
+?> 
+
+Досягнення дня</h1>
 <h3> Велич не тіки в великих справах, також в великій кількості малих</h3>
 </header>
 <?php 
