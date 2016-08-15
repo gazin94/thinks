@@ -1,17 +1,22 @@
 <?php
+session_start();
 require_once 'mysqlConnect.php';
-
+//Connect DB
 $dbc=new MysqlConnect();
-$pass=md5($_POST['pass']);
 $dbc->connect();
-$queryID="SELECT id from users where login='".$_POST['login']."' pass='".$pass"'";
+//Envcrypt pass
+$pass=md5($_POST['pass']);
+$login=$_POST['login'];
+$queryID='SELECT id from users where (login="'.$login.'")AND(pass="'.$pass.'")';
+//print $queryID;
 $auth=$dbc->querySelect($queryID);
-if ($auth) {
-	echo "Привет ".$_POST['login'];
+print '<hr>';
+print_r($auth);
+if (empty($auth)) {
+	echo "empty";
+	header('location:login.html');
 }
-echo htmlspecialchars($_POST['login']);
-echo htmlspecialchars($_POST['pass']);
-
-
-
+echo "Привет ".$_POST['login'];
+$_SESSION['id']=$autch['id'];
+header('location:index.php');
 ?>

@@ -1,29 +1,25 @@
 <?php 
 require_once 'mysqlConnect.php';
-
-//print_r($_POST);
-
-
+	
 if ($_POST['password']==$_POST['re_password']) {
-	$password=$test->emptyTest($_POST['re_password']);
-	$pass=md5($password);
+	//Подключение кбазе данніх
 	$test=new MysqlConnect();
 	$test->connect();
+	print_r($_POST);
+	//Проверка на пустоту в полях
+	$password=$test->emptyTest($_POST['re_password']);
 	$login=$test->emptyTest($_POST['login']);
 	$email=$test->emptyTest($_POST['email']);
-
+	//Шифрование пароля
+	$pass=md5($password);
+	//Отпавка данных в базу данных
 	$query='INSERT INTO users SET'
 		.' login="'.$login.'"'
 		.',email="'.$email.'"'
-		.', pass="'.$pass.'"';
-
+		.',pass="'.$pass.'"';
 	$res=$test->queryInsert($query);
-	//print '<hr>';
-	//print_r($res);
 	
-	//print '<hr>';
 	if ($res) $_SESSION['user_id']=$res;
-	//print 'Вы залгинились как '.$login.'('.$res.')';
 }
 else
 	echo "Пароли не совпадают";
