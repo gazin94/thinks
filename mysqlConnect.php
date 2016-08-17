@@ -31,7 +31,15 @@ class MysqlConnect {
 		if ($result) 
 			return $result->fetch_assoc();
 		else
-			return 'hernya';
+			return 0;
+	}
+
+	function querySelectArray($query){
+		$result=$this->db->query($query);//query on database
+		if ($result) 
+			return $result;
+		else
+			return 0;
 	}
 
 	function queryInsert($query){

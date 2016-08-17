@@ -11,7 +11,7 @@
 <?php
 session_start();
 echo "Hello ";
-print_r($_SESSION); 
+echo implode("",$_SESSION['id']); 
 ?> 
 
 Досягнення дня</h1>

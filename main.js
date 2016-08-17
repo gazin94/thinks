@@ -32,11 +32,8 @@ function popup(){
 	'<textarea class="thinks" name="text"></textarea><br>'+
 	'<button class="reg" type="submit" value="Отправить" name="save" onclick=this.form.submit() />'+
 	'Отправить</button>'+
-<<<<<<< HEAD
 	'<button class="reg" type="submit" value="Отправить" name="cancel" onClick='+'close_popup(x)'+' />'+
-=======
 	'<button class="reg" type="submit" value="Отправить" name="cancel" onClick='+'stopPropagation()'+' />'+
->>>>>>> e580afdb6336f622a02b4ba602d09dc1431eff72
 	'Отменить</button>,</form>';
 }
 

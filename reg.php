@@ -1,11 +1,11 @@
 <?php 
+// РАБОТАЄТ НЕ ТРОГАТЬ!!!
 require_once 'mysqlConnect.php';
 	
 if ($_POST['password']==$_POST['re_password']) {
 	//Подключение кбазе данніх
 	$test=new MysqlConnect();
 	$test->connect();
-	print_r($_POST);
 	//Проверка на пустоту в полях
 	$password=$test->emptyTest($_POST['re_password']);
 	$login=$test->emptyTest($_POST['login']);
@@ -17,9 +17,9 @@ if ($_POST['password']==$_POST['re_password']) {
 		.' login="'.$login.'"'
 		.',email="'.$email.'"'
 		.',pass="'.$pass.'"';
-	$res=$test->queryInsert($query);
-	
-	if ($res) $_SESSION['user_id']=$res;
+	$test->queryInsert($query);
+	//Отправляєт на login.html
+	header('location:index.php');
 }
 else
 	echo "Пароли не совпадают";
