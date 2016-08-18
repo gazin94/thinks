@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (!empty($_SESSION)) {
+ 
+	}else
+header('location:hello.html');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +14,7 @@
 	 <script type="text/javascript" src="main.js"></script>
 	 <meta charset="utf-8" />
 </head>
+<body>
 <header>
 <DIV class="header"><h1>
 <?php
@@ -17,7 +26,8 @@ include('php/username.php');
 
 include('php/achivments.php');
 include('php/new.php');
-//ВВод логина 
+//ВВод логина 	
+
 //header("Location:login.html");
 ?>
 </body>
