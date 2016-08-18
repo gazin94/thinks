@@ -9,14 +9,14 @@
 <header>
 <DIV class="header"><h1>
 <?php
-include("username.php");
+include('php/username.php');
 ?> 
 </h1>
 </header>
 <?php 
 
-include("achivments.php");
-include("new.php");
+include('php/achivments.php');
+include('php/new.php');
 //ВВод логина 
 //header("Location:login.html");
 ?>
