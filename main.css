@@ -5,7 +5,7 @@ div.thinks
 	width: 170px;
 	background-color: #ffb74d;
 	border-radius: 10px; 
-	
+	word-wrap: break-word;
 	display: inline-block;
 	padding: 10px;
 	margin: 20px;
@@ -26,6 +26,12 @@ textarea.thinks
 	font-size: 18px;
 	width:260px;
 	height:130px;
+	border-right-color: white;
+	border-left-color: white;
+	border-top-color: white;
+	border-bottom-color: #BDBDBD;
+	border-bottom-width: 2.5px; 
+	outline: none;
 }
 
 body
@@ -124,13 +130,14 @@ button.reg
  }
 
  .form {
- 	
+ 	padding: 20px;
+ 	padding-bottom: 5px;
  	position:absolute;
  	top:50%;
  	left:50%;
 	margin-top:-130px;
 	margin-left:-68px;
-
+	background-color: white;
  }
  /*Ввод текста*/
  div.new
@@ -140,5 +147,5 @@ button.reg
 	transform: translate(-50%, -50%);
 	padding: 15px;
 	font-size: 18px;
-
  }
+

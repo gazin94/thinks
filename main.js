@@ -28,12 +28,11 @@ function newTag(ATagName,AClassName,APad,AInner,AOnClick){
 function popup(){
 	var pad=newTag('DIV','pad',document.body,null,'close_popup(this)');
 	window.form=newTag('DIV','form',document.body,null,'cancel_event()');
-	form.innerHTML='<form method="post" action='+'php/save.php'+'>'+
-	'<textarea class="thinks" name="text"></textarea><br>'+
-	'<button class="reg" type="submit" value="Отправить" name="save" onclick=this.form.submit() />'+
-	'Отправить</button>'+
-	'<button class="reg" type="submit" value="Отправить" name="cancel" onClick='+'cancel_event()'+' />'+
-	'Отменить</button>,</form>';
+	form.innerHTML='<DIV=class='+'popup'+'><form method="post" action='+'php/save.php'+'>'+
+	'<center><textarea class="thinks" name="text" autofocus maxlength="140"></textarea>'+
+	'<center><button class="reg" type="submit" value="Отправить" name="save" onclick=this.form.submit() />'+
+	'Отправить</button></center>'+
+	'</form></DIV>';
 }
 
 function close_popup(src){
