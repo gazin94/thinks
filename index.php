@@ -3,7 +3,7 @@ session_start();
 if (!empty($_SESSION)) {
  
 	}else
-header('location:hello.html');
+header('location:login.html');
 ?>
 
 <!DOCTYPE html>
@@ -15,20 +15,15 @@ header('location:hello.html');
 	 <meta charset="utf-8" />
 </head>
 <body>
-<header>
-<DIV class="header"><h1>
-<?php
-include('php/username.php');
-?> 
-</h1>
-</header>
+<div class="header">
+	<?php
+	include('php/username.php');
+	?>
+	<a class="header" name="exit" href="php/exit.php">Выход</a>
+	</div>
 <?php 
-
 include('php/achivments.php');
 include('php/new.php');
-//ВВод логина 	
-
-//header("Location:login.html");
 ?>
 </body>
 </html>

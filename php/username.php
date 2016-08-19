@@ -9,5 +9,7 @@ $con->connect();
 $user_id=implode("", $_SESSION['id']);
 $query='SELECT login FROM `users` WHERE id='.$user_id;
 $res=$con->querySelect($query); 
-echo "Привет ",implode('',$res);
+printf("Привет ");
+printf(implode('',$res));
+printf("! Сделай штото и запиши сюда.");
  ?>
