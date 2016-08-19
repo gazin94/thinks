@@ -159,8 +159,8 @@ button.reg
  	position:absolute;
  	top:50%;
  	left:50%;
-	margin-top:-153px;
-	margin-left:-104px;
+	margin-top:-104px;
+	margin-left:-153px;
 	background-color: white;
  }
  /*Ввод текста*/
