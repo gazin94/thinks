@@ -5,7 +5,6 @@ if (!empty($_SESSION)) {
 	}else
 header('location:login.html');
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
