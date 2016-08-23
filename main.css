@@ -16,7 +16,8 @@ div.thinks:hover{	/*Реакция  на наведение кнопки*/
 	box-shadow: 0 21px 42px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 div.thinks:active{	/*Рекация не нажатие кнопки*/
-	box-shadow: 0 0px 0px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	box-shadow: 0 0px 0px rgba(0,0,0,0.16), 0 21px 42px rgba(0,0,0,0.23);
+	
 }
 
 button.thinks{	/*Кнока для добавления новой записи*/
@@ -96,9 +97,6 @@ button.login{	/*Кнопка входа*/
  	text-decoration: none;
  	color:black;
 }
- font.login{
- 	color: black;
-}
 /*Стиль регистрацыии*/
 div.reg{
 	position: absolute;/*Позициониррование на центр в браузере*/
@@ -127,9 +125,6 @@ button.reg{	/*Кнопки на регистрации*/
  	bottom:0px;
  	background-color:gray;
  	opacity:0.8;
- 	text-align:center;
- 	vertical-align:middle;
- 	display:inline-block;
  }
  .form {	/*Само окно*/
  	padding: 20px;
@@ -139,4 +134,5 @@ button.reg{	/*Кнопки на регистрации*/
  	left:50%;
 	transform: translate(-50%, -50%);
 	background-color: white;
+	border-radius:10px; 
  } 
