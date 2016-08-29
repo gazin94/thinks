@@ -1,67 +1,95 @@
 /*Стиль главной страницы*/
-div.thinks
-{
+div.thinks{	/*Основной блок иформации*/
 	height: 170px;
 	width: 170px;
 	background-color: #ffb74d;
 	border-radius: 10px; 
-	
+	word-wrap: break-word;
 	display: inline-block;
 	padding: 10px;
 	margin: 20px;
-	vertical-align:top;
+	vertical-align: top;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-button.thinks
-{
+div.thinks:hover{	/*Реакция  на наведение кнопки*/
+	box-shadow: 0 21px 42px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+div.thinks:active{	/*Рекация не нажатие кнопки*/
+	box-shadow: 0 0px 0px rgba(0,0,0,0.16), 0 21px 42px rgba(0,0,0,0.23);
+	
+}
+
+button.thinks{	/*Кнока для добавления новой записи*/
 	height: 140px;
 	width: 170px;
-	background-color: #ffb74d;
-	
+	background-color: #ffb74d;	
 	outline: none; 
 	border-width: 0;
 	font-size: 20px;
 }
-textarea.thinks
-{
+textarea.thinks{	/*Текстовое поле ввода записи*/
 	font-size: 18px;
 	width:260px;
 	height:130px;
+	border-right-color: white;
+	border-left-color: white;
+	border-top-color: white;
+	border-bottom-color: #BDBDBD;
+	border-bottom-width: 2.5px; 
+	outline: none;
+}
+/*Шапкеа сайта*/
+
+body{	/*Ппарметры заднго фона сайта*/
+	background-color: #B2EBF2;
+	margin: 0;
+	padding: 0;
+	padding-top: 40px;
+	width:100%;
+	height: 100%;
+}
+div.header{	/*Верхняя часть сайта*/
+	position: fixed;
+	top:0px;
+	left:0px;
+	background-color:#FF9800;
+	width: 100%;
+	height: 40px;
+	font-size: 25px;
+	box-shadow: 0 21px 42px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+a.header{	/*Выход с сайта!!!!!КОСТЫЛЬ*/
+	font-size: 20px;
+	float: right;
+	font-size: 25px;
 }
 
-body
-{
-	background-color: #B2EBF2;
-}
-a
-{
+a{	/*Общий вид ссылок*/
  	font-size: 18px;
  	text-decoration: none;
  	color:black;	
 }
 /*Стиль логина*/
-div.login
-{
+div.login{	/*Параметры окна входа на сайт*/	
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-right: -50%;
 	transform: translate(-50%, -50%);
 	background-color: #FFD54F;
 	padding: 15px;
 	font-size: 18px;
 }
-input.login
-{
+input.login{	/*Параметры для вводных полей*/
 	border: 5px solid white;
 	width: 200px;
  	height: 30px;
  	font-size: 18px;
  	outline: none;
  	margin: 6px;
- 	text-align: center;
+ 	text-align: left;
 }
-button.login
-{
+button.login{	/*Кнопка входа*/	
 	font-size: 18px;
  	height: 30px;
  	width: 55px;
@@ -71,29 +99,22 @@ button.login
     outline: none;
     margin: 6px; 
 }
- a.login
-{
+ a.login{	/*ссылка*/	
  	float: right;
  	font-size: 18px;
  	text-decoration: none;
  	color:black;
 }
- font.login
-{
- 	color: black;
-}
 /*Стиль регистрацыии*/
-div.reg
-{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); 
+div.reg{
+	position: absolute;/*Позициониррование на центр в браузере*/
+	top: 50%;	/*центр по верху*/
+	left: 50%;	/*центр по краю*/
+	transform: translate(-50%, -50%);	/*Центроирование окна внутри*/
 	font-size: 18px;
 	display: inline-flex;
 }
-button.reg
-{
+button.reg{	/*Кнопки на регистрации*/
 	font-size: 18px;
  	height: 30px;
  	width: 130px;
@@ -102,15 +123,9 @@ button.reg
 	border-width: 0;
     outline: none;
     margin: 6px; 
-
  }
-/*Html popup*/
-
-
-
  /*Javascript popup*/
-
- .pad {
+ .pad {	/*Подслойка для всплывающего окна*/
  	position:fixed;
  	left:0px;
  	right:0px;
@@ -118,27 +133,15 @@ button.reg
  	bottom:0px;
  	background-color:gray;
  	opacity:0.8;
- 	text-align:center;
- 	vertical-align:middle;
- 	display:inline-block;
  }
-
- .form {
- 	
+ .form {	/*Само окно*/
+ 	position: fixed;
+ 	padding: 20px;
+ 	padding-bottom: 5px;
  	position:absolute;
  	top:50%;
  	left:50%;
-	margin-top:-130px;
-	margin-left:-68px;
-
- }
- /*Ввод текста*/
- div.new
- {
- 	background-color: white;
-	margin-right: -50%;
 	transform: translate(-50%, -50%);
-	padding: 15px;
-	font-size: 18px;
-
- }
+	background-color: white;
+	border-radius:10px; 
+ } 

@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if (!empty($_SESSION)) {
+ 
+	}else
+header('location:login.html');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,23 +13,16 @@
 	 <script type="text/javascript" src="main.js"></script>
 	 <meta charset="utf-8" />
 </head>
-<header>
-<DIV class="header"><h1>
-<?php
-session_start();
-echo "Hello ";
-echo implode("",$_SESSION['id']); 
-?> 
-
-Досягнення дня</h1>
-<h3> Велич не тіки в великих справах, також в великій кількості малих</h3>
-</header>
+<body>
+<div class="header">
+	<?php
+	include('php/username.php');
+	?>
+	<a class="header" name="exit" href="php/exit.php">Выход</a>
+	</div>
 <?php 
-
-include("achivments.php");
-include("new.php");
-//ВВод логина 
-//header("Location:login.html");
+include('php/achivments.php');
+include('php/new.php');
 ?>
 </body>
 </html>

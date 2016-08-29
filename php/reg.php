@@ -19,7 +19,7 @@ if ($_POST['password']==$_POST['re_password']) {
 		.',pass="'.$pass.'"';
 	$test->queryInsert($query);
 	//Отправляєт на login.html
-	header('location:login');
+	header('location:../login');
 }
 else
 	echo "Пароли не совпадают";
